@@ -1,0 +1,35 @@
+//Пояснение ООП
+//класс прямоугольник, у него 2 свойства ширина и высота
+class Rectangle{
+    width;
+    height;
+
+// у любого класса есть конструктор, это метод, блок инструкций который вызыввается при создании объекта
+// принимает в себя некоторые аргументы, обычно в конструкторе присваиваются какие то значения
+//  в данном случае высота и ширина прямоугольника
+    constructor(w,h) {
+       this.width = w;
+       this.height = h;
+     }
+
+
+
+
+//this объект у которого будет вызван этот метод
+    calcArea(){
+        return this.width * this.height;
+
+    }
+    calcPerimeter(){
+        return(this.height+this.width)*2
+    }
+
+}
+
+// с помощью оператора new  можем создать объект, это отдельный экземпляр какого либо класса
+// при этом аргументами пердаем длинну и ширину
+const rect = new Rectangle(5, 10)
+const rect2 = new Rectangle(10, 14)
+const rect3 = new Rectangle(15, 18)
+rect.calcArea()
+console.log(rect.calcArea())
